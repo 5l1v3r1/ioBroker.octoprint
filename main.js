@@ -282,6 +282,10 @@ function buildRequest(service, callback, data)
         function(error, response, content) {
             if (!error && (response.statusCode == 200 || response.statusCode == 204)) {
                callback(content);
+            } else if (!error && response.statusCode == 409) {
+                printerStatus = 'Disconnected';
+                adapter.setState('printer_status', {val: printerStatus, ack: true});
+                adapter.log.debug('Status Code: ' + response.statusCode + ' / Content: ' + content);
             } else if (error) {
                 adapter.setState('info.connection', false, true);
                 conntected = false;
