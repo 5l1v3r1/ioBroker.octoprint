@@ -169,6 +169,27 @@ function refreshState()
             function (content) {
                 printerStatus = content.current.state;
                 adapter.setState('printer_status', {val: printerStatus, ack: true});
+				
+				adapter.setObjectNotExists('printer_connected', {
+                            type: 'state',
+                            common: {
+                                name: 'Actual',
+                                type: 'number',
+                                role: 'value',
+                                read: true,
+                                write: false
+                            },
+                            native: {}
+                        });
+						
+                adapter.setState('printer_status', {val: printerStatus, ack: true});
+				
+				if(printerStatus == "Disconnected"){
+					adapter.setState('printer_connected', {val: 0, ack: true});
+				}else{
+					adapter.setState('printer_connected', {val: 1, ack: true});			
+				}		
+						
             },
             null
         );
@@ -261,7 +282,35 @@ function refreshState()
             },
             null
         );
-    }
+    }else{	
+
+		//reset values on dc
+		
+		//tool0
+		adapter.setState('temperature.tool0.actual', {val: 0, ack: true});
+		adapter.setState('temperature.tool0.target', {val: 0, ack: true});
+		adapter.setState('temperature.tool0.offset', {val: 0, ack: true});
+		//bed
+		adapter.setState('temperature.bed.actual', {val: 0, ack: true});
+		adapter.setState('temperature.bed.target', {val: 0, ack: true});
+		adapter.setState('temperature.bed.offset', {val: 0, ack: true});
+		
+		//job
+		adapter.setState('printjob.file.name', {val: "", ack: true});
+		adapter.setState('printjob.file.origin', {val: "", ack: true});
+		adapter.setState('printjob.file.size', {val: 0, ack: true});
+		adapter.setState('printjob.file.date', {val: 0, ack: true});
+		
+		//filament
+		adapter.setState('printjob.filament.length', {val: 0, ack: true});
+        adapter.setState('printjob.filament.volume', {val: 0, ack: true});
+		
+		//progress
+		adapter.setState('printjob.progress.completion', {val: 0, ack: true});
+		adapter.setState('printjob.progress.filepos', {val: 0, ack: true});
+		adapter.setState('printjob.progress.printtime', {val: 0, ack: true});
+		adapter.setState('printjob.progress.printtime_left', {val: 0s, ack: true});
+	}
 }
 
 function buildRequest(service, callback, data)
