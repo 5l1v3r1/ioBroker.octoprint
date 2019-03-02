@@ -58,8 +58,8 @@
             "type": "state",
             "common": {
                 "name": "Printer Connected",
-		"type": 'number',
-		"role": 'value',
+		"type": "number",
+		"role": "value",
 		"read": true,
 		"write": false
             },
