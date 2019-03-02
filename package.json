@@ -26,9 +26,9 @@
     "ioBroker",
     "octoprint",
     "Smart Home",
-    "home automation"
-    "3d printer"
-    "plugin"
+    "home automation",
+    "3d printer",
+    "plugin",
   ],
   "repository": {
     "type": "git",
