@@ -309,7 +309,7 @@ function refreshState()
 		adapter.setState('printjob.progress.completion', {val: 0, ack: true});
 		adapter.setState('printjob.progress.filepos', {val: 0, ack: true});
 		adapter.setState('printjob.progress.printtime', {val: 0, ack: true});
-		adapter.setState('printjob.progress.printtime_left', {val: 0s, ack: true});
+		adapter.setState('printjob.progress.printtime_left', {val: 0, ack: true});
 	}
 }
 
