@@ -32,15 +32,15 @@ Adapter to connect OctoPrint to ioBroker
    
 ### 0.0.3
 
-* (resper) fix connection status
+* fix connection status
 
 ### 0.0.2
 
-* (resper) Log verhalten angepasst
+* Log verhalten angepasst
 
 ### 0.0.1
 
-* (klein0r) initial release
+* initial release
 
 
 ### Credits   
