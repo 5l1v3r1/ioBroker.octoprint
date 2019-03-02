@@ -44,6 +44,6 @@ Adapter to connect OctoPrint to ioBroker
 
 
 ### Credits   
-Forked from https://github.com/mkutscher/ioBroker.octoprint
+Forked from https://github.com/mkutscher/ioBroker.octoprint   
 Forked from https://github.com/resper/ioBroker.octoprint   
 Original credits goes to https://github.com/klein0r/ioBroker.octoprint MIT
