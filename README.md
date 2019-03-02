@@ -1,4 +1,5 @@
-![IOBroker](https://raw.githubusercontent.com/ioBroker/ioBroker/master/img/ioBrokerLogoSmall.png) ![OctoPrint](admin/octoprint.png)
+![IOBroker](https://raw.githubusercontent.com/ioBroker/ioBroker/master/img/ioBrokerLogoSmall.png) ![OctoPrint](admin/octoprint.png)   
+   
 [![GitHub release](https://img.shields.io/github/release/reloxx13/ioBroker.octoprint.svg)](https://GitHub.com/reloxx13/ioBroker.octoprint/releases/) 
 [![GitHub contributors](https://img.shields.io/github/contributors/reloxx13/ioBroker.octoprint.svg)](https://GitHub.com/reloxx13/ioBroker.octoprint/graphs/contributors/) 
 
