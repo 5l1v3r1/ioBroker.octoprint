@@ -1,14 +1,14 @@
 {
     "common": {
         "name": "octoprint",
-        "version": "0.0.3",
+        "version": "0.0.3-1",
         "news": {
-            "0.0.3": {
-                "en": "Fix connextion status",
-                "de": "Fix connextion status"
+            "0.0.3-1": {
+                "en": "Reset values on dc",
+                "de": "Reset values on dc"
             }
         },
-		"title": "OctoPrint",
+	"title": "OctoPrint",
         "titleLang": {
             "en": "Javascript / Node.js based OctoPrint adapter",
             "de": "Javascript / Node.js basierte OctoPrint-Adapter"
@@ -18,7 +18,7 @@
             "de": "ioBroker OctoPrint Adapter"
         },
         "authors": [
-            "Markus Bodmann <info@resper.de>"
+            "Matthias Kleine <info@haus-automatisierung.com>"
         ],
         "docs": {
             "en": "docs/en/admin.md",
@@ -29,10 +29,10 @@
         "icon": "octoprint.png",
         "materialize": true,
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/resper/ioBroker.octoprint/master/admin/octoprint.png",
+        "extIcon": "https://raw.githubusercontent.com/reloxx13/ioBroker.octoprint/master/admin/octoprint.png",
         "keywords": ["octoprint"],
         "license": "MIT",
-        "readme": "https://github.com/resper/ioBroker.octoprint/blob/master/README.md",
+        "readme": "https://github.com/reloxx13/ioBroker.octoprint/blob/master/README.md",
         "loglevel": "info",
         "type": "hardware"
     },
@@ -50,6 +50,18 @@
                 "role": "value",
                 "read": true,
                 "write": false
+            },
+            "native": {}
+        },
+        {
+            "_id": "printer_connected",
+            "type": "state",
+            "common": {
+                "name": "Printer Connected",
+		"type": 'number',
+		"role": 'value',
+		"read": true,
+		"write": false
             },
             "native": {}
         },
